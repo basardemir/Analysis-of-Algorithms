@@ -1,0 +1,17 @@
+1) We have to construct 3 B-Tree using same nodes with pointers. Therefore, while performing insertion, we have to set pointer connections for each key. We can consider problem as insertion for three times according to different key values. Complexity of each insertion is same as insertion for ordinary B-Tree that is O(logn) (comes from logt*log_t(n)). Total complexity is O(logn) from 3*O(logn).
+
+2)
+-- O(log(B-Tree n)) -> find mini B-tree position in B-Tree
+-- O(log(mini B-Tree n)) -> insertion to mini B-Tree
+-- O(mini B-Tree n) -> calculate standard deviation using traverse
+	***if we keep node number of mini B-Tree and sum of x values of all mini B-Tree nodes, we can decrease calculation complexity to O(1)
+if deviation is changed, update node position:
+	-- O(log(B-Tree n)) -> remove node
+	-- O(log(B-Tree n)) -> insert node again
+                 
+Total complexity with standard deviation search: O(mini B-Tree n) + O(log(B-Tree n)) 
+***Total complexity without standard deviation search: O(log(mini B-Tree n)) + O(log(B-Tree n))
+
+
+Name-Surname: Başar Demir
+Student Number: 150180080
